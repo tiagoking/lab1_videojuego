@@ -1,0 +1,17 @@
+<h1>Los mejores videojuengos en <small>FET VideoGames</small></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 d-flex aling-items-strech" *ngFor="let videojuego of videojuegos; let i = index">
+            <div class="card">
+                <img class="card-img-top" [src]="videojuego.img" [alt]="videojuego.nombre">
+                <div class="card-body">
+                    <h5 class="card-title">{{videojuego.nombre}}</h5>
+                    <p class="card-text">{{videojuego.descripcion}}</p>
+                    <p class="card-text"><small class="text-muted">{{videojuego.consola}}</small></p>
+                    <button type="button" (click)="verVideojuego(i)" class="btn btn-outline-primary btn-rounded"
+                        data-mdb-ripple-color="dark">Ver mas ...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
